@@ -73,4 +73,10 @@ public class MjpegInputStreamDefault extends MjpegInputStream {
         readFully(frameData);
         return BitmapFactory.decodeStream(new ByteArrayInputStream(frameData));
     }
+    
+  // add the procedure   
+ @Override
+    public void startPlayback() {
+        _startPlayback();
+    }
 }
